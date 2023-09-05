@@ -14,6 +14,16 @@
 		AFCDCD2C2A5DF2B500650D0B /* TestSlideImageTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFCDCD2B2A5DF2B500650D0B /* TestSlideImageTests.swift */; };
 		AFCDCD362A5DF2B500650D0B /* TestSlideImageUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFCDCD352A5DF2B500650D0B /* TestSlideImageUITests.swift */; };
 		AFCDCD382A5DF2B500650D0B /* TestSlideImageUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFCDCD372A5DF2B500650D0B /* TestSlideImageUITestsLaunchTests.swift */; };
+		AFCDCD462A5DF2DA00650D0B /* MediaSlideshow in Frameworks */ = {isa = PBXBuildFile; productRef = AFCDCD452A5DF2DA00650D0B /* MediaSlideshow */; };
+		AFCDCD482A5DF2DA00650D0B /* MediaSlideshowKingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = AFCDCD472A5DF2DA00650D0B /* MediaSlideshowKingfisher */; };
+		AFCDCD4A2A5DF2EA00650D0B /* SlideImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFCDCD492A5DF2EA00650D0B /* SlideImage.swift */; };
+		AFCDCD512A5DF36A00650D0B /* MediaSlideshowAlamofire in Frameworks */ = {isa = PBXBuildFile; productRef = AFCDCD502A5DF36A00650D0B /* MediaSlideshowAlamofire */; };
+		AFCDCD532A5DF36A00650D0B /* MediaSlideshowSDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = AFCDCD522A5DF36A00650D0B /* MediaSlideshowSDWebImage */; };
+		AFCDCD552A5DF47C00650D0B /* SlideImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFCDCD542A5DF47C00650D0B /* SlideImageView.swift */; };
+		AFCDCD572A5E037300650D0B /* DisableScrollingModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFCDCD562A5E037300650D0B /* DisableScrollingModifier.swift */; };
+		AFE77D8F2AA6DF850017E90A /* ZLPhotoBrowser in Frameworks */ = {isa = PBXBuildFile; productRef = AFE77D8E2AA6DF850017E90A /* ZLPhotoBrowser */; };
+		AFE77D912AA6DF920017E90A /* ZLImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE77D902AA6DF920017E90A /* ZLImagePicker.swift */; };
+		AFE77D952AA6E5100017E90A /* ImageStickerContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE77D942AA6E5100017E90A /* ImageStickerContainerView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +54,11 @@
 		AFCDCD312A5DF2B500650D0B /* TestSlideImageUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestSlideImageUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFCDCD352A5DF2B500650D0B /* TestSlideImageUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestSlideImageUITests.swift; sourceTree = "<group>"; };
 		AFCDCD372A5DF2B500650D0B /* TestSlideImageUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestSlideImageUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		AFCDCD492A5DF2EA00650D0B /* SlideImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideImage.swift; sourceTree = "<group>"; };
+		AFCDCD542A5DF47C00650D0B /* SlideImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideImageView.swift; sourceTree = "<group>"; };
+		AFCDCD562A5E037300650D0B /* DisableScrollingModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisableScrollingModifier.swift; sourceTree = "<group>"; };
+		AFE77D902AA6DF920017E90A /* ZLImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZLImagePicker.swift; sourceTree = "<group>"; };
+		AFE77D942AA6E5100017E90A /* ImageStickerContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageStickerContainerView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +66,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AFCDCD512A5DF36A00650D0B /* MediaSlideshowAlamofire in Frameworks */,
+				AFCDCD482A5DF2DA00650D0B /* MediaSlideshowKingfisher in Frameworks */,
+				AFCDCD532A5DF36A00650D0B /* MediaSlideshowSDWebImage in Frameworks */,
+				AFE77D8F2AA6DF850017E90A /* ZLPhotoBrowser in Frameworks */,
+				AFCDCD462A5DF2DA00650D0B /* MediaSlideshow in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +98,7 @@
 				AFCDCD2A2A5DF2B500650D0B /* TestSlideImageTests */,
 				AFCDCD342A5DF2B500650D0B /* TestSlideImageUITests */,
 				AFCDCD182A5DF2B300650D0B /* Products */,
+				AFCDCD4F2A5DF36A00650D0B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -96,6 +117,11 @@
 			children = (
 				AFCDCD1A2A5DF2B300650D0B /* TestSlideImageApp.swift */,
 				AFCDCD1C2A5DF2B300650D0B /* ContentView.swift */,
+				AFCDCD562A5E037300650D0B /* DisableScrollingModifier.swift */,
+				AFCDCD492A5DF2EA00650D0B /* SlideImage.swift */,
+				AFCDCD542A5DF47C00650D0B /* SlideImageView.swift */,
+				AFE77D902AA6DF920017E90A /* ZLImagePicker.swift */,
+				AFE77D942AA6E5100017E90A /* ImageStickerContainerView.swift */,
 				AFCDCD1E2A5DF2B400650D0B /* Assets.xcassets */,
 				AFCDCD202A5DF2B400650D0B /* Preview Content */,
 			);
@@ -127,6 +153,13 @@
 			path = TestSlideImageUITests;
 			sourceTree = "<group>";
 		};
+		AFCDCD4F2A5DF36A00650D0B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -143,6 +176,13 @@
 			dependencies = (
 			);
 			name = TestSlideImage;
+			packageProductDependencies = (
+				AFCDCD452A5DF2DA00650D0B /* MediaSlideshow */,
+				AFCDCD472A5DF2DA00650D0B /* MediaSlideshowKingfisher */,
+				AFCDCD502A5DF36A00650D0B /* MediaSlideshowAlamofire */,
+				AFCDCD522A5DF36A00650D0B /* MediaSlideshowSDWebImage */,
+				AFE77D8E2AA6DF850017E90A /* ZLPhotoBrowser */,
+			);
 			productName = TestSlideImage;
 			productReference = AFCDCD172A5DF2B300650D0B /* TestSlideImage.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +255,10 @@
 				Base,
 			);
 			mainGroup = AFCDCD0E2A5DF2B300650D0B;
+			packageReferences = (
+				AFCDCD442A5DF2DA00650D0B /* XCRemoteSwiftPackageReference "MediaSlideshow" */,
+				AFE77D8D2AA6DF850017E90A /* XCRemoteSwiftPackageReference "ZLPhotoBrowser" */,
+			);
 			productRefGroup = AFCDCD182A5DF2B300650D0B /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -257,8 +301,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AFCDCD4A2A5DF2EA00650D0B /* SlideImage.swift in Sources */,
+				AFE77D912AA6DF920017E90A /* ZLImagePicker.swift in Sources */,
 				AFCDCD1D2A5DF2B300650D0B /* ContentView.swift in Sources */,
+				AFCDCD552A5DF47C00650D0B /* SlideImageView.swift in Sources */,
 				AFCDCD1B2A5DF2B300650D0B /* TestSlideImageApp.swift in Sources */,
+				AFE77D952AA6E5100017E90A /* ImageStickerContainerView.swift in Sources */,
+				AFCDCD572A5E037300650D0B /* DisableScrollingModifier.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -425,6 +474,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -454,6 +504,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -583,6 +634,53 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		AFCDCD442A5DF2DA00650D0B /* XCRemoteSwiftPackageReference "MediaSlideshow" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pm-dev/MediaSlideshow";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
+		AFE77D8D2AA6DF850017E90A /* XCRemoteSwiftPackageReference "ZLPhotoBrowser" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/longitachi/ZLPhotoBrowser";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		AFCDCD452A5DF2DA00650D0B /* MediaSlideshow */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AFCDCD442A5DF2DA00650D0B /* XCRemoteSwiftPackageReference "MediaSlideshow" */;
+			productName = MediaSlideshow;
+		};
+		AFCDCD472A5DF2DA00650D0B /* MediaSlideshowKingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AFCDCD442A5DF2DA00650D0B /* XCRemoteSwiftPackageReference "MediaSlideshow" */;
+			productName = MediaSlideshowKingfisher;
+		};
+		AFCDCD502A5DF36A00650D0B /* MediaSlideshowAlamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AFCDCD442A5DF2DA00650D0B /* XCRemoteSwiftPackageReference "MediaSlideshow" */;
+			productName = MediaSlideshowAlamofire;
+		};
+		AFCDCD522A5DF36A00650D0B /* MediaSlideshowSDWebImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AFCDCD442A5DF2DA00650D0B /* XCRemoteSwiftPackageReference "MediaSlideshow" */;
+			productName = MediaSlideshowSDWebImage;
+		};
+		AFE77D8E2AA6DF850017E90A /* ZLPhotoBrowser */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AFE77D8D2AA6DF850017E90A /* XCRemoteSwiftPackageReference "ZLPhotoBrowser" */;
+			productName = ZLPhotoBrowser;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = AFCDCD0F2A5DF2B300650D0B /* Project object */;
 }

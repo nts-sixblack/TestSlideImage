@@ -1,0 +1,59 @@
+{
+  "pins" : [
+    {
+      "identity" : "alamofire",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Alamofire/Alamofire.git",
+      "state" : {
+        "revision" : "bc268c28fb170f494de9e9927c371b8342979ece",
+        "version" : "5.7.1"
+      }
+    },
+    {
+      "identity" : "alamofireimage",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Alamofire/AlamofireImage.git",
+      "state" : {
+        "revision" : "98cbb00ce0ec5fc8e52a5b50a6bfc08d3e5aee10",
+        "version" : "4.2.0"
+      }
+    },
+    {
+      "identity" : "kingfisher",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/onevcat/Kingfisher.git",
+      "state" : {
+        "revision" : "1a0c2df04b31ed7aa318354f3583faea24f006fc",
+        "version" : "5.15.8"
+      }
+    },
+    {
+      "identity" : "mediaslideshow",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/pm-dev/MediaSlideshow",
+      "state" : {
+        "revision" : "7059ebed1ce86ca1fe722b89870a082649c5e39c",
+        "version" : "2.1.1"
+      }
+    },
+    {
+      "identity" : "sdwebimage",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/SDWebImage/SDWebImage.git",
+      "state" : {
+        "revision" : "c51ba84499268ea3020e6aee9e229c0f56b9d924",
+        "version" : "5.16.0"
+      }
+    },
+    {
+      "identity" : "zlphotobrowser",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/longitachi/ZLPhotoBrowser",
+      "state" : {
+        "revision" : "d22ddcbcbdb68a9622bb664a15762886ab836d95",
+        "version" : "4.4.4"
+      }
+    }
+  ],
+  "version" : 2
+}
