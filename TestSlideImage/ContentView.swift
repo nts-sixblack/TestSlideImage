@@ -30,10 +30,17 @@ struct ContentView: View {
                     showSelectImage.toggle()
                 }
             }
+            .frame(maxWidth: .infinity, maxHeight: .infinity)
+            .background(.gray)
             .fullScreenCover(isPresented: $showSelectImage) {
                 ZLPhotoPicker { assets in
-                    print("select assets success: \(assets.count)")
+                    print("picker assest success: \(assets.count)")
+                    showSelectImage = false
+                } onCancel: {
+                    print("cancel")
+                    showSelectImage = false
                 }
+
             }
             
 //            VStack {

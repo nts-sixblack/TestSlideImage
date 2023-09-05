@@ -23,7 +23,6 @@
 		AFCDCD572A5E037300650D0B /* DisableScrollingModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFCDCD562A5E037300650D0B /* DisableScrollingModifier.swift */; };
 		AFE77D8F2AA6DF850017E90A /* ZLPhotoBrowser in Frameworks */ = {isa = PBXBuildFile; productRef = AFE77D8E2AA6DF850017E90A /* ZLPhotoBrowser */; };
 		AFE77D912AA6DF920017E90A /* ZLImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE77D902AA6DF920017E90A /* ZLImagePicker.swift */; };
-		AFE77D952AA6E5100017E90A /* ImageStickerContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE77D942AA6E5100017E90A /* ImageStickerContainerView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,7 +57,6 @@
 		AFCDCD542A5DF47C00650D0B /* SlideImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideImageView.swift; sourceTree = "<group>"; };
 		AFCDCD562A5E037300650D0B /* DisableScrollingModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisableScrollingModifier.swift; sourceTree = "<group>"; };
 		AFE77D902AA6DF920017E90A /* ZLImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZLImagePicker.swift; sourceTree = "<group>"; };
-		AFE77D942AA6E5100017E90A /* ImageStickerContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageStickerContainerView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,11 +115,10 @@
 			children = (
 				AFCDCD1A2A5DF2B300650D0B /* TestSlideImageApp.swift */,
 				AFCDCD1C2A5DF2B300650D0B /* ContentView.swift */,
+				AFE77D902AA6DF920017E90A /* ZLImagePicker.swift */,
+				AFCDCD542A5DF47C00650D0B /* SlideImageView.swift */,
 				AFCDCD562A5E037300650D0B /* DisableScrollingModifier.swift */,
 				AFCDCD492A5DF2EA00650D0B /* SlideImage.swift */,
-				AFCDCD542A5DF47C00650D0B /* SlideImageView.swift */,
-				AFE77D902AA6DF920017E90A /* ZLImagePicker.swift */,
-				AFE77D942AA6E5100017E90A /* ImageStickerContainerView.swift */,
 				AFCDCD1E2A5DF2B400650D0B /* Assets.xcassets */,
 				AFCDCD202A5DF2B400650D0B /* Preview Content */,
 			);
@@ -306,7 +303,6 @@
 				AFCDCD1D2A5DF2B300650D0B /* ContentView.swift in Sources */,
 				AFCDCD552A5DF47C00650D0B /* SlideImageView.swift in Sources */,
 				AFCDCD1B2A5DF2B300650D0B /* TestSlideImageApp.swift in Sources */,
-				AFE77D952AA6E5100017E90A /* ImageStickerContainerView.swift in Sources */,
 				AFCDCD572A5E037300650D0B /* DisableScrollingModifier.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

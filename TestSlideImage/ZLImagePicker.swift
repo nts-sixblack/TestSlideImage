@@ -11,15 +11,53 @@ import SwiftUI
 import Photos
 
 struct ZLPhotoPicker: UIViewControllerRepresentable {
-    typealias UIViewType = UIViewController
-    
+    typealias UIViewControllerType = ZLViewController
     var onDone: ([PHAsset]) -> Void
+    var onCancel: () -> Void
     
-    func makeUIViewController(context: Context) -> some UIViewController {
-        var view = UIViewController()
+    func makeUIViewController(context: Context) -> ZLViewController {
+        let vc = ZLViewController()
+        vc.delegate = context.coordinator
+        vc.showImagePicker()
+        return vc
+    }
+    
+    func updateUIViewController(_ uiViewController: ZLViewController, context: Context) {
         
-        var selectedAssets: [PHAsset] = []
+    }
+    
+    func makeCoordinator() -> Coordinator {
+        Coordinator(parent: self)
+    }
+  
+    class Coordinator: NSObject, ZLImagePickerDelegate {
+        var parent: ZLPhotoPicker
         
+        init(parent: ZLPhotoPicker) {
+            self.parent = parent
+        }
+        
+        func onSelected(assets: [PHAsset]) {
+            parent.onDone(assets)
+        }
+        
+        func onCancel() {
+            parent.onCancel()
+        }
+    }
+    
+}
+
+class ZLViewController: UIViewController {
+
+    var selectedAssets: [PHAsset] = []
+    var delegate: ZLImagePickerDelegate?
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    }
+    
+    func showImagePicker() {
         let minItemSpacing: CGFloat = 2
         let minLineSpacing: CGFloat = 2
         
@@ -40,8 +78,8 @@ struct ZLPhotoPicker: UIViewControllerRepresentable {
         }
         
         // Custom image editor
-        ZLPhotoConfiguration.default()
-            .editImageConfiguration
+//        ZLPhotoConfiguration.default()
+//            .editImageConfiguration
 //            .imageStickerContainerView(ImageStickerContainerView())
 //            .canRedo(true)
 //            .tools([.draw, .clip, .mosaic, .filter])
@@ -73,7 +111,28 @@ struct ZLPhotoPicker: UIViewControllerRepresentable {
                     debugPrint("No microphone authority")
                 }
             }
-
+//            .gifPlayBlock { imageView, data, _ in
+//                let animatedImage = FLAnimatedImage(gifData: data)
+//
+//                var animatedImageView: FLAnimatedImageView?
+//                for subView in imageView.subviews {
+//                    if let subView = subView as? FLAnimatedImageView {
+//                        animatedImageView = subView
+//                        break
+//                    }
+//                }
+//
+//                if animatedImageView == nil {
+//                    animatedImageView = FLAnimatedImageView()
+//                    imageView.addSubview(animatedImageView!)
+//                }
+//
+//                animatedImageView?.frame = imageView.bounds
+//                animatedImageView?.animatedImage = animatedImage
+//                animatedImageView?.runLoopMode = .default
+//            }
+//            .pauseGIFBlock { $0.subviews.forEach { ($0 as? FLAnimatedImageView)?.stopAnimating() } }
+//            .resumeGIFBlock { $0.subviews.forEach { ($0 as? FLAnimatedImageView)?.startAnimating() } }
 //            .operateBeforeDoneAction { currVC, block in
 //                // Do something before select photo result callback, and then call block to continue done action.
 //                block()
@@ -84,35 +143,36 @@ struct ZLPhotoPicker: UIViewControllerRepresentable {
         
 //        let ac = ZLPhotoPreviewSheet(selectedAssets: takeSelectedAssetsSwitch.isOn ? selectedAssets : nil)
         
-        ac.selectImageBlock = { results, isOriginal in
-            // your code
+        ac.selectImageBlock = { [weak self] results, isOriginal in
+            guard let `self` = self else { return }
+
+            self.selectedAssets = results.map { $0.asset }
             
-//            guard let `self` = self else { return }
+            delegate?.onSelected(assets: selectedAssets)
+
+//            debugPrint("assets: \(self.selectedAssets)")
+//            debugPrint("isEdited: \(results.map { $0.isEdited })")
+//            debugPrint("isOriginal: \(isOriginal)")
             
-//            onDone(results.map { $0.asset })
-            
-            let assets = results.map { $0.asset }
-            self.saveAsset(assets: assets)
-            
+//            guard !self.selectedAssets.isEmpty else { return }
+//            self.saveAsset(self.selectedAssets[0])
         }
         ac.cancelBlock = {
             debugPrint("cancel select")
+            self.delegate?.onCancel()
         }
         ac.selectImageRequestErrorBlock = { errorAssets, errorIndexs in
             debugPrint("fetch error assets: \(errorAssets), error indexs: \(errorIndexs)")
         }
         
-        ac.showPhotoLibrary(sender: view)
-        
-        return view
+            ac.showPhotoLibrary(sender: self)
+
     }
+
+}
+
+protocol ZLImagePickerDelegate {
+    func onSelected(assets: [PHAsset])
     
-    func updateUIViewController(_ uiViewController: UIViewControllerType, context: Context) {
-        
-    }
-    
-    func saveAsset(assets: [PHAsset]) {
-        self.onDone(assets)
-    }
-    
+    func onCancel()
 }
